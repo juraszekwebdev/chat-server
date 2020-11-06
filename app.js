@@ -3,18 +3,8 @@ const http = require('http').createServer(app);
 const socketIO = require('socket.io');
 const io = new socketIO.Server(http);
 const cors = require('cors')
-const whitelist = ['http://localhost:8080', '*']
-const corsOptions = {
-	origin: function (origin, callback) {
-		if (whitelist.indexOf(origin) !== -1) {
-			callback(null, true)
-		} else {
-			callback(new Error('Not allowed by CORS'))
-		}
-	}
-}
-app.use(cors(corsOptions))
-io.use(cors(corsOptions))
+app.options('*', cors())
+
 app.get('/', (req, res) => {
 	res.send('<h1>Hello world</h1>');
 });
