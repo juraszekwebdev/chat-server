@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 http.listen(PORT, () => {
 	console.log('listening on *:3000');
 });
-io.origins('*:*') // for latest version
+io.set('origins', 'http://localhost:8080/');
 let channels = [];
 let members = [];
 let initialized = false;
