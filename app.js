@@ -1,7 +1,7 @@
 const http = require('http');
 const socketIO = require('socket.io');
 const options = {};
-const port = 5000;
+const port = process.env.PORT | 5000;
 
 
 //start http
