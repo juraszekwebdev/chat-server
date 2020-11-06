@@ -1,9 +1,9 @@
 const app = require('express')();
 const http = require('http').createServer(app);
-const socketIO = require('socket.io');
-const io = new socketIO.Server(http);
-const cors = require('cors')
-app.options('*', cors())
+const {Server} = require('socket.io');
+const io = new Server({
+	origins: '*' // i believe can also be an array of urls, defaults to '*'
+});
 
 app.get('/', (req, res) => {
 	res.send('<h1>Hello world</h1>');
