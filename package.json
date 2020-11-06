@@ -1,0 +1,11 @@
+{
+  "name": "chat-sevrer",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.0"
+  },
+  "engines": {
+    "node": "12.16.3"
+  }
+}
