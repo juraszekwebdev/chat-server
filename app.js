@@ -2,18 +2,17 @@ const app = require('express')();
 const http = require('http').createServer(app);
 const socketIO = require('socket.io');
 const io = new socketIO.Server(http);
+const cors = require('cors')
+
+app.use(cors())
 
 app.get('/', (req, res) => {
 	res.send('<h1>Hello world</h1>');
 });
 
-
-const PORT = process.env.PORT || 5000;
-
-http.listen(PORT, () => {
-	console.log('listening on *:3000');
+http.listen(process.env.PORT || 5000, () => {
+	console.log('listening on *:5000');
 });
-io.set('origins', 'http://localhost:8080/');
 let channels = [];
 let members = [];
 let initialized = false;
