@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 	res.send('<h1>Hello world</h1>');
 });
 
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT || 5000;
 
 http.listen(PORT, () => {
 	console.log('listening on *:3000');
