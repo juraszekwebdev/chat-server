@@ -10,9 +10,6 @@ const server = express()
 
 const io = socketIO(server);
 
-
-
-
 let channels = [];
 let members = [];
 let initialized = false;
