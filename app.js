@@ -1,17 +1,19 @@
-const app = require('express')();
-const http = require('http').createServer(app);
-const {Server} = require('socket.io');
-const io = new Server({
-	origins: '*' // i believe can also be an array of urls, defaults to '*'
-});
+const http = require('http');
+const socketIO = require('socket.io');
+const options = {};
+const port = 5000;
 
-app.get('/', (req, res) => {
-	res.send('<h1>Hello world</h1>');
-});
 
-http.listen(process.env.PORT || 5000, () => {
-	console.log('listening on *:5000');
-});
+//start http
+const app = http.createServer(options);
+const io = socketIO(app, {
+	log: false,
+	agent: false,
+	origins: '*:*'
+})
+
+app.listen(port);
+console.log('listening on port ' + port);
 let channels = [];
 let members = [];
 let initialized = false;
