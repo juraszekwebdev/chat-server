@@ -5,6 +5,10 @@ Demo version: [LINK](https://pj-chat-app.netlify.app/)
 
 ## Running project
 
+### Demo user access
+### Email: demo@demo.com
+### Password: demo123
+
 ### Install dependencies
 ### `npm install`
 
