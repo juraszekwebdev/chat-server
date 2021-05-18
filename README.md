@@ -1,20 +1,11 @@
 # Chat App Server
-This is server for [Chat App](https://pj-chat-app.netlify.app/) It is written in Express & Socket.IO.
+This is NodeJS server for [Chat App](https://github.com/juraszekwebdev/chat-app). It is written in Express
 
-Demo version: [LINK](https://pj-chat-app.netlify.app/)
+Demo: [LINK](https://pj-chat-app.netlify.app/)
 
-## Running project
+## Running project locally
 
-### Demo user access
-### Email: demo@demo.com
-### Password: demo123
-
-### Install dependencies
-### `npm install`
-
-### Run locally
-### `npm run start`
+### `node index.js`
 
 ## Used technologies
-- Express JS
-- Socket.IO
+- Express
